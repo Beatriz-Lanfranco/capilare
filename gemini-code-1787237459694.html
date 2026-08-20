@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#0284c7">
+  <title>Meu Cronograma Capilar</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Área de Visualização Superior (Leitura passiva) -->
+  <header class="app-header">
+    <span class="badge">Hoje</span>
+    <h1 id="today-title">Carregando...</h1>
+    <p id="today-desc">Acompanhe seu tratamento da semana.</p>
+  </header>
+
+  <main class="content-scroll">
+    <section class="card" id="status-card">
+      <div class="card-tag">Etapa Atual</div>
+      <h2 id="current-step-name">Hidratação</h2>
+      <p id="current-step-details">Foco em reposição de água e maciez dos fios.</p>
+      <div class="progress-bar">
+        <div class="progress-fill" style="width: 35%;"></div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h3>Histórico Recente</h3>
+      <ul class="history-list" id="history-list">
+        <li>Nutrição — Feito há 2 dias</li>
+        <li>Hidratação — Feito há 5 dias</li>
+      </ul>
+    </section>
+  </main>
+
+  <!-- Zona do Polegar: Controles principais no terço inferior -->
+  <footer class="thumb-zone">
+    <!-- Ação Primária Flutuante -->
+    <button class="fab-btn" id="btn-complete">
+      <span class="fab-icon">✓</span>
+      <span class="fab-text">Concluir Etapa</span>
+    </button>
+
+    <!-- Barra de Navegação Inferior -->
+    <nav class="bottom-nav">
+      <button class="nav-item active" data-view="home">
+        <span class="nav-icon">📅</span>
+        <span class="nav-label">Rotina</span>
+      </button>
+      <button class="nav-item" data-view="calendar">
+        <span class="nav-icon">💧</span>
+        <span class="nav-label">Etapas</span>
+      </button>
+      <button class="nav-item" data-view="profile">
+        <span class="nav-icon">👤</span>
+        <span class="nav-label">Perfil</span>
+      </button>
+    </nav>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
